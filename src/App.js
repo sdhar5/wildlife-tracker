@@ -21,7 +21,13 @@ function App() {
 
   return (
     <div>
-      { !loading ? <Map eventData={eventData}/> : <div className='loader'></div>}
+      { !loading ? 
+        <Map eventData={eventData}/> : 
+        <div className='loader'>
+          <div className='spinner'></div>
+          <h1>Fetching Data</h1>
+        </div> 
+      }
     </div>
   );
 }
