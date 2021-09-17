@@ -27,6 +27,7 @@ const Map = ({ eventData, center, zoom}) => {
             >
                 {markers}
             </GoogleMapReact>
+            {/* Display LocationInfoBox */}
             {locationInfo && <LocationInfoBox info={locationInfo} />}
         </div>
     )

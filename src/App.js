@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import Map from "./components/Map";
+import Header from "./components/Header"
 
 function App() {
   const [eventData, seteventData] = useState([])
@@ -21,8 +22,12 @@ function App() {
 
   return (
     <div>
+      
       { !loading ? 
-        <Map eventData={eventData}/> : 
+        <div>
+          <Header />
+          <Map eventData={eventData}/> 
+        </div>: 
         <div className='loader'>
           <div className='spinner'></div>
           <h1>Fetching Data</h1>
